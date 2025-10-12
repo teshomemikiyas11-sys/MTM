@@ -1,0 +1,215 @@
+
+
+/* ===== Mexon Music Basic Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Circular Std", sans-serif;
+}
+
+body {
+  background: #121212;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #181818;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #1db954;
+}
+
+.logo span {
+  color: #fff;
+}
+
+#hamburger {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Navigation */
+.nav-menu {
+  position: fixed;
+  top: 60px;
+  right: -100%;
+  width: 75%;
+  height: calc(100% - 60px);
+  background: #181818;
+  transition: 0.3s;
+  z-index: 9;
+  padding: 1rem;
+}
+
+.nav-menu.show {
+  right: 0;
+}
+
+.nav-menu ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.nav-menu ul li {
+  margin: 1rem 0;
+}
+
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.nav-menu a:hover {
+  color: #1db954;
+}
+
+/* Pages */
+main {
+  margin-top: 70px;
+  padding: 1rem;
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+.tracks-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.track {
+  background: #181818;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.track:hover {
+  background: #282828;
+}
+
+.track img {
+  width: 100%;
+  border-bottom: 2px solid #1db954;
+}
+
+.track .title {
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.track .artist {
+  font-size: 0.8rem;
+  color: #bbb;
+  margin-bottom: 0.5rem;
+}
+
+/* Music Player */
+.music-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #181818;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+  padding: 1rem;
+}
+
+.music-player.show {
+  display: flex;
+}
+
+.player-header {
+  text-align: center;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.player-header i {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 1rem 0;
+}
+
+.controls button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.controls button:hover {
+  color: #1db954;
+}
+
+.controls .play {
+  font-size: 2rem;
+  color: #1db954;
+}
+
+.progress-bar {
+  width: 80%;
+  height: 6px;
+  background: #333;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+#progress {
+  width: 0%;
+  height: 100%;
+  background: #1db954;
+  transition: width 0.2s linear;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  font-size: 0.9rem;
+  color: #aaa;
+}

@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mexon Music</title>
+<link href="https://fonts.cdnfonts.com/css/circular-std" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <h1 class="logo">Mexon<span>Music</span></h1>
+  <i id="hamburger" class="fa-solid fa-bars"></i>
+</header>
+
+<nav class="nav-menu" id="navMenu">
+  <ul>
+    <li><a href="#" class="nav-link" data-page="home">Home</a></li>
+    <li><a href="#" class="nav-link" data-page="artists">Artists</a></li>
+    <li><a href="#" class="nav-link" data-page="playlists">Playlists</a></li>
+    <li><a href="#" class="nav-link" data-page="search">Search</a></li>
+  </ul>
+</nav>
+
+<main>
+  <section id="home" class="page active">
+    <h2>Trending Tracks</h2>
+    <div id="trendingTracks" class="tracks-container"></div>
+  </section>
+
+  <section id="artists" class="page">
+    <h2>Artists</h2>
+    <div id="artistsList" class="tracks-container"></div>
+  </section>
+
+  <section id="playlists" class="page">
+    <h2>Playlists</h2>
+    <div id="playlistsList" class="tracks-container"></div>
+  </section>
+
+  <section id="search" class="page">
+    <h2>Search</h2>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search music...">
+      <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+    <div id="searchResults" class="tracks-container"></div>
+  </section>
+</main>
+
+<!-- Music Player -->
+<div class="music-player" id="musicPlayer">
+  <div class="player-header">
+    <i id="closePlayer" class="fa-solid fa-xmark"></i>
+    <img id="trackThumb" src="https://via.placeholder.com/200" alt="Thumbnail" class="track-thumbnail">
+    <h3 id="trackTitle">Song Title</h3>
+    <p id="trackArtist">Artist Name</p>
+  </div>
+
+  <div class="controls">
+    <button id="shuffle"><i class="fa-solid fa-shuffle"></i></button>
+    <button id="prev"><i class="fa-solid fa-backward-step"></i></button>
+    <button id="back10"><i class="fa-solid fa-rotate-left"></i></button>
+    <button id="playPause"><i class="fa-solid fa-play"></i></button>
+    <button id="next"><i class="fa-solid fa-forward-step"></i></button>
+  </div>
+
+  <div class="progress-container">
+    <span id="currentTime">0:00</span>
+    <div class="progress-bar">
+      <div id="progress"></div>
+    </div>
+    <span id="duration">0:00</span>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
